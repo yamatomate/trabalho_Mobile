@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "EXPO_NO_TELEMETRY=1 expo start",
+   "dev": "cross-env EXPO_NO_TELEMETRY=1 expo start",
     "build:web": "expo export --platform web",
     "lint": "expo lint"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@lucide/lab": "^0.1.2",
+    "@react-native-async-storage/async-storage": "^1.21.0",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "expo": "52.0.33",
@@ -38,12 +39,12 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "^0.19.13",
     "react-native-webview": "13.12.5",
-    "victory-native": "^36.9.1",
-    "@react-native-async-storage/async-storage": "^1.21.0"
+    "victory-native": "^36.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "cross-env": "^7.0.3",
     "typescript": "^5.3.3"
   }
 }
