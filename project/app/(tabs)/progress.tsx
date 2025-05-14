@@ -95,17 +95,20 @@ export default function ProgressScreen() {
                 />
                 <VictoryAxis
                   dependentAxis
-                  tickFormat={(y) => `${y}kg`}
+                  // tickFormat={(y) => `${y}kg`} //nesse aqui o valor do Y que seria o peso fica com muitas casas apos a virgula ou ponto
+                  tickFormat={(y) => `${parseFloat(y.toString().replace(',', '.')).toFixed(2).replace('.', ',')} kg`}  //limita a parte decimal apenas a 2 casas
                 />
                 <VictoryLine
                   data={chartData}
                   style={{
                     data: { stroke: "#6366f1", strokeWidth: 3 }
                   }}
+                  /*
                   animate={{
                     duration: 500,
                     onLoad: { duration: 500 }
                   }}
+                  */ //o grafico tende a não funcionar bem quando ativado 
                 />
                 <VictoryScatter
                   data={chartData}

@@ -19,6 +19,7 @@ export default function ExercisesScreen() {
   }, []);
 
   const handleDeleteExercise = (id: string) => {
+    //A função Alert não funciona em web mas caso esteja demostrando tal funcionalidade no web adicione ao codigo antes do ALert "deleteExercise(id)"
     Alert.alert(
       "Excluir Exercício",
       "Tem certeza que deseja excluir este exercício? Todos os registros serão perdidos.",
