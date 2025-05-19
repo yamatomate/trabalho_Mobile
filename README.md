@@ -17,6 +17,7 @@ npx expo install @react-native-async-storage/async-storage@1.23.1 expo-constants
 
 npx expo start --tunnel
 
+npm install --legacy-peer-deps 
 
 Baixar o app Expo go 
 
